@@ -21,27 +21,36 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0/js/tempusdominus-bootstrap-4.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 
-    <div class="row">
 
-        <table class="col-sm-12 table table-bordered table-hover table-responsive">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Train Name</th>
-                    <th scope="col">Destination</th>
-                    <th scope="col">Frequency (min)</th>
-                    <th scope="col">Next Arrival</th>
-                    <th scope="col">Minutes Away</th>
-                </tr>
-            </thead>
-            <tbody>
+    <div class="container-fluid p-0 m-auto">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>Train Schedule</h2>
+            </div>
+        </div>
 
-            </tbody>
-        </table>
+        <div class="row col-12 d-flex justify-content-center">
+            <table class="table table-bordered table-hover table-responsive text-center m-3">
+   
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col" style="width: 10%">#</th>
+                            <th scope="col" style="width: 20%">Train Name</th>
+                            <th scope="col" style="width: 30%">Destination</th>
+                            <th scope="col" style="width: 10%">Frequency (min)</th>
+                            <th scope="col" style="width: 20%">Next Arrival</th>
+                            <th scope="col" style="width: 10%">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+            </table>
+        </div>
     </div>
 
     <!-- added ID to form -->
-    <form id="the-form">
+    <form id="the-form" class='m-3'>
         <div class="form-group row">
             <label for="colFormLabel" class="col-sm-2 col-form-label">Train Name</label>
             <div class="col-sm-4">
