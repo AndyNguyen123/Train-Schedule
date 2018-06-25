@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Schedule</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0/css/tempusdominus-bootstrap-4.min.css"
+    />
+
+</head>
+
+<body>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
+    <div class="row">
+
+        <table class="col-sm-12 table table-bordered table-hover table-responsive">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>9 3/4</td>
+                    <td>Hogwarts</td>
+                    <td>60</td>
+                    <td>00:00 AM</td>
+                    <td>12</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- added ID to form -->
+    <form id="the-form">
+        <div class="form-group row">
+            <label for="colFormLabel" class="col-sm-2 col-form-label">Train Name</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="train-name" placeholder="BeepBeep">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="colFormLabel" class="col-sm-2 col-form-label">Destination</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="destination" placeholder="Hogwarts">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="colFormLabel" class="col-sm-2 col-form-label">Frequency (min)</label>
+            <div class="col-sm-4">
+                <input type="number" class="form-control" id="frequency">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="colFormLabel" class="col-sm-2 col-form-label">First Train At</label>
+            <div class="input-group date col-sm-4" id="datetimepicker3" data-target-input="nearest">
+                <input type="text" id="first-train-time" class="form-control datetimepicker-input" data-target="#datetimepicker3" />
+                <div class="input-group-append" data-target="#datetimepicker3" data-toggle="datetimepicker">
+                    <div class="input-group-text">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker3').datetimepicker({
+                        format: 'LT'
+                    });
+                });
+            </script>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submit-btn">Submit</button>
+    </form>
+
+
+
+    <script src="./assets/javascript/train.js"></script>
+
+</body>
+
+</html>
